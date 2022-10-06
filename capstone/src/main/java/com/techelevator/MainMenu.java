@@ -18,7 +18,8 @@ public class MainMenu{
         String mainMenuChoice = userInput.nextLine();
         int mainChoice = Integer.parseInt(mainMenuChoice);
         if (mainChoice == 1) {
-            // display inventory
+            Inventory i = new Inventory();
+            i.getItemQuantity();
         } else if (mainChoice == 2) {
             PurchaseMenu pm = new PurchaseMenu();
             pm.getDisplayPurchaseOptions();
