@@ -16,14 +16,11 @@ public class Menu {
         slots.add(thirdSlot);
 
         for(int i = 0; i < slots.size(); i++){
-            System.out.println("("+(i+1)+") " + slots.indexOf(i+1));
+            System.out.println("("+(i+1)+") " + slots.);
         }
 
 
         System.out.printf("(1) %s \n (2) %s \n, (3) %s \n", firstSlot, secondSlot, thirdSlot);
     }
-
-
-
 
 }
