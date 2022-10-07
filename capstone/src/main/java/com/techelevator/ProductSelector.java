@@ -6,7 +6,7 @@ public class ProductSelector {
 
         InventoryRead ir = new InventoryRead();
 
-        FeedMoney fm = new FeedMoney();
+        MoneyBank fm = new MoneyBank();
 
 
 
@@ -16,6 +16,7 @@ public class ProductSelector {
             System.out.println("Please select your desired product's location: ");
             String selection = userInput.nextLine();
             Item item = new Item();
+            MoneyBank fm = new MoneyBank();
             if(inventory.containsKey(selection)){
                 System.out.println(inventory.get(selection).getItemNames() + " | " + inventory.get(selection).getItemPrices());
                     if(selection.contains("A")){

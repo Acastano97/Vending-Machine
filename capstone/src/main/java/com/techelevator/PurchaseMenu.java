@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class PurchaseMenu {
-    FeedMoney fm = new FeedMoney();
+    MoneyBank fm = new MoneyBank();
     private BigDecimal startingBalance = new BigDecimal("0.00");
     private String[] displayPurchaseOptions;
     private BigDecimal feedBalance = new BigDecimal("0.00");
@@ -22,7 +22,7 @@ public class PurchaseMenu {
         String PurchaseMenuChoice = userInput.nextLine();
         int purchaseChoice = Integer.parseInt(PurchaseMenuChoice);
         if (purchaseChoice == 1){
-            System.out.println("Current Money Provided: " + fm.getFeedBalance());
+            System.out.println("Current balance is $" + fm.getBalance());
             getDisplayPurchaseOptions(inventory);
         }else if (purchaseChoice == 2){
             ProductSelector ps = new ProductSelector();
