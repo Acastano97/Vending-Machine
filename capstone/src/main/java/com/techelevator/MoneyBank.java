@@ -4,18 +4,15 @@ import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class MoneyBank {
-   PurchaseProcess pp = new PurchaseProcess();
-   private BigDecimal intialBalance = new BigDecimal("0");
-   private BigDecimal feedBalance;
+   private BigDecimal feedBalance = BigDecimal.ZERO;
 
 
-   public BigDecimal addMoney() {
-      intialBalance.add(pp.getMoneyAdded());
-      return addMoney();
+   public void addMoney(BigDecimal newFunds) {
+      feedBalance = feedBalance.add(newFunds);
 
    }
    public BigDecimal getBalance(){
-      return intialBalance.add(pp.getMoneyAdded());
+      return feedBalance;
    }
 
 }
