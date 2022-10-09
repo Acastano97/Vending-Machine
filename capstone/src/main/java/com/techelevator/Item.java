@@ -15,7 +15,7 @@ public class Item {
     }
 
     public int getItemCount() {
-        return itemCount;
+        return this.itemCount;
     }
 
     public String getLocations() {
@@ -33,6 +33,8 @@ public class Item {
     public String getItemTypes() {
         return itemTypes;
     }
+
+
 
     public Item(String line) {
         String[] lineParts = line.split("\\|");

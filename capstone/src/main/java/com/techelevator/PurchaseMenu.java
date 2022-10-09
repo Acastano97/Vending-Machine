@@ -41,9 +41,6 @@ public class PurchaseMenu {
 
     private void displayInventory(Map<String, Item> inventory) {
 
-//        for each item in the inventory
-//                print it out to the console
-
         for (String key : inventory.keySet()) {
             Item shortItem = inventory.get(key);
             System.out.println(shortItem.getLocations() + " | " + shortItem.getItemNames() + " | " + shortItem.getItemPrices() + " | " + shortItem.getItemTypes() + " | " + shortItem.getItemCount());

@@ -29,22 +29,17 @@ public class MainMenu{
             System.exit(0);
         } else if (mainChoice == 4) {
             // Display sales report
+            System.out.println("**Total Sales**");
+            System.out.println("");
+            getDisplayMainOptions(inventory);
         } else {
             System.out.println("Please choose a listed option");
         }
         return displayMainOptions;
 
-//    public MainMenu() {
-//        String[] displayMainOptions = {"(1) Display Vending Machine Items", "(2) Purchase", "(3) Exit", "(4) Sales Report"};
-//        for (int i = 0; i < displayMainOptions.length-1; i++){
-//            System.out.println(displayMainOptions[i]);
-//        }
     }
 
     private void displayInventory (Map <String,Item> inventory) {
-
-//        for each item in the inventory
-//                print it out to the console
 
        for (String key : inventory.keySet()){
            Item shortItem = inventory.get(key);
