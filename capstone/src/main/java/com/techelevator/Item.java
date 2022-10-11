@@ -9,6 +9,7 @@ public class Item {
     String itemPrices;
     String itemTypes;
     int itemCount = 5;
+    ProductSelector ps = new ProductSelector();
 
     public Item() {
 

@@ -21,7 +21,6 @@ public class MainMenu{
             displayInventory(inventory);
             System.out.println("");
             getDisplayMainOptions(inventory);
-
         } else if (mainChoice == 2) {
             PurchaseMenu pm = new PurchaseMenu();
             pm.getDisplayPurchaseOptions(inventory);

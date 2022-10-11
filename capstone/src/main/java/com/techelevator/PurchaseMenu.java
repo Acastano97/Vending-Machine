@@ -5,7 +5,8 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class PurchaseMenu {
-    MoneyBank fm = new MoneyBank();
+    MoneyBank mb = new MoneyBank();
+    ProductSelector ps = new ProductSelector();
     private BigDecimal startingBalance = new BigDecimal("0.00");
     private String[] displayPurchaseOptions;
     private BigDecimal feedBalance = new BigDecimal("0.00");
@@ -15,8 +16,8 @@ public class PurchaseMenu {
 
         String[] displayPurchaseOptions = {"(1) Feed Money", "(2) Select Product", "(3) Finish Transaction"};
         while (true) {
+            System.out.println("Current balance is $" + mb.getBalance());
 
-            System.out.println("Current balance is $" + fm.getBalance());
 
             for (int i = 0; i < displayPurchaseOptions.length; i++) {
                 System.out.println(displayPurchaseOptions[i]);
@@ -27,7 +28,7 @@ public class PurchaseMenu {
             String PurchaseMenuChoice = userInput.nextLine();
             int purchaseChoice = Integer.parseInt(PurchaseMenuChoice);
             if (purchaseChoice == 1) {
-                feedMoney();
+                mb.feedMoney();
             } else if (purchaseChoice == 2) {
                 ProductSelector ps = new ProductSelector();
                 displayInventory(inventory);
@@ -46,11 +47,6 @@ public class PurchaseMenu {
             System.out.println(shortItem.getLocations() + " | " + shortItem.getItemNames() + " | " + shortItem.getItemPrices() + " | " + shortItem.getItemTypes() + " | " + shortItem.getItemCount());
         }
     }
-    public void feedMoney() {
-        Scanner userInput = new Scanner(System.in);
-        System.out.println("Please enter the amount of money you would like to add: ");
-        String moneyAddedStr = userInput.nextLine();
-        BigDecimal moneyAdded = new BigDecimal(moneyAddedStr);
-        this.fm.addMoney(moneyAdded);
-    }
+
+
 }
