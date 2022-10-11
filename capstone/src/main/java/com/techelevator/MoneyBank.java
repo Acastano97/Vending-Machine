@@ -20,20 +20,20 @@ public class MoneyBank {
       return feedBalance;
    }
 
-   public void setFeedBalance(BigDecimal feedBalance) {
-      this.feedBalance = feedBalance;
-   }
+//   public void setFeedBalance(BigDecimal feedBalance) {
+//      this.feedBalance = feedBalance;
+//   }
 
    public BigDecimal getBalance(){
       return feedBalance;
    }
-   public void feedMoney() {
-      Scanner userInput = new Scanner(System.in);
-      System.out.println("Please enter the amount of money you would like to add: ");
-      String moneyAddedStr = userInput.nextLine();
-      BigDecimal moneyAdded = new BigDecimal(moneyAddedStr);
-      addMoney(moneyAdded);
-   }
+//   public void feedMoney() {
+//      Scanner userInput = new Scanner(System.in);
+//      System.out.println("Please enter the amount of money you would like to add: ");
+//      String moneyAddedStr = userInput.nextLine();
+//      BigDecimal moneyAdded = new BigDecimal(moneyAddedStr);
+//      addMoney(moneyAdded);
+//   }
 
 
 }

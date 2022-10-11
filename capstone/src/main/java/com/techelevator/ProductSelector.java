@@ -3,6 +3,8 @@ package com.techelevator;
 import java.math.BigDecimal;
 import java.util.*;
 
+//Probably dont need this class anymore
+
 public class ProductSelector {
 
         InventoryRead ir = new InventoryRead();
@@ -20,23 +22,26 @@ public class ProductSelector {
             String selection = userInput.nextLine();
             Item item = new Item();
             MoneyBank fm = new MoneyBank();
-            if(inventory.containsKey(selection)){
-                fm.subtractMoney(new BigDecimal(inventory.get(selection).getItemPrices()));
-                System.out.println(inventory.get(selection).getItemNames() + " | " + inventory.get(selection).getItemPrices());
-                    if(selection.contains("A")){
-                        System.out.println("Crunch Crunch, Yum!");
-                    } else if (selection.contains("B")){
-                        System.out.println("Munch Munch, Yum!");
-                    }else if (selection.contains("C")){
-                        System.out.println("Glug Glug, Yum!");
-                    }else if (selection.contains("D")){
-                        System.out.println("Chew Chew, Yum!");
-                    }
-            } else {
-                System.out.println("Please choose an item in the Vending Machine");
-            }
-
-            return null;
-        }
+//            if(inventory.containsKey(selection)){
+////                fm.subtractMoney(new BigDecimal(inventory.get(selection).getItemPrices()));
+//                BigDecimal price = new BigDecimal(inventory.get(selection).getItemPrices());
+//                fm.subtractMoney(price);
+//                System.out.println(inventory.get(selection).getItemNames() + " | " + inventory.get(selection).getItemPrices());
+//                    if(selection.contains("A")){
+//                        System.out.println("Crunch Crunch, Yum!");
+//                    } else if (selection.contains("B")){
+//                        System.out.println("Munch Munch, Yum!");
+//                    }else if (selection.contains("C")){
+//                        System.out.println("Glug Glug, Yum!");
+//                    }else if (selection.contains("D")){
+//                        System.out.println("Chew Chew, Yum!");
+//                    }
+//            } else {
+//                System.out.println("Please choose an item in the Vending Machine");
+//            }
+//
+//            return null;
+        return selection;
+    }
 
 }
