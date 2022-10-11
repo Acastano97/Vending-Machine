@@ -15,8 +15,16 @@ public class Item {
 
     }
 
+    public void setItemCount(int itemCount) {
+        this.itemCount = itemCount;
+    }
+
+    public void updateInventory() {
+
+    }
+
     public int getItemCount() {
-        return this.itemCount;
+        return itemCount;
     }
 
     public String getLocations() {

@@ -18,6 +18,7 @@ public class InventoryRead {
                     Item ir = new Item(lineOfText);
                     inventory.put(ir.getLocations(), ir);
 
+
                 }
 
             } catch (FileNotFoundException e) {
