@@ -24,7 +24,7 @@ public class Inventory {
 
             } catch (FileNotFoundException e) {
 
-            }
+            }1
             for (InventoryReader item : allInventory) {
                 System.out.println(item.getItemNames() +" | " + itemQuantity);
 
