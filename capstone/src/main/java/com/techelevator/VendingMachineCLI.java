@@ -9,15 +9,16 @@ public class VendingMachineCLI {
 	}
 
 	public void run() {
+		InventoryRead ir = new InventoryRead();
+		MainMenu mm = new MainMenu();
+		mm.getDisplayMainOptions(ir.getItemList());
 	}
 
 	public static void main(String[] args) {
 		VendingMachineCLI cli = new VendingMachineCLI();
 		cli.run();
-		MainMenu mm = new MainMenu();
-		PurchaseMenu pm = new PurchaseMenu();
-		mm.getDisplayMainOptions();
-		pm.getDisplayPurchaseOptions();
+
+
 
 
 
