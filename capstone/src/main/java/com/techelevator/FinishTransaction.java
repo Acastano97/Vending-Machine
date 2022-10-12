@@ -34,6 +34,7 @@ int numOfPennies;
                balance.subtract(PENNY);
                numOfPennies++;
            }
+        System.out.printf("%s Quarters, %s Dimes, %s Nickels, %s Penny\n", numOfQuarters, numOfDimes, numOfNickels, numOfPennies);
        }
     public void makeChange2(BigDecimal balance){
        BigDecimal balAfterQuarter = balance.divide(QUARTER);
@@ -52,6 +53,6 @@ int numOfPennies;
        System.out.printf("%s Quarters, %s Dimes, %s Nickles, %s Pennies", numOfQuarter, numOfDimes, numOfNickles, numOfPennies);
     }
     public void makeChange3(BigDecimal balance){
-        
+
     }
 }

@@ -77,7 +77,7 @@ public class PurchaseMenu {
                         }
 
                     } else if (purchaseChoice == 3) {
-                        ft.makeChange2(mb.getBalance());
+                        ft.makeChange(mb.getBalance());
                         System.out.printf("Your change is $%s", mb.getBalance());
                         break;
                     }
