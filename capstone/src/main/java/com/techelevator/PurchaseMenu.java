@@ -8,9 +8,11 @@ public class PurchaseMenu {
     MoneyBank mb = new MoneyBank();
     ProductSelector ps = new ProductSelector();
     Item item = new Item();
+    FinishTransaction ft = new FinishTransaction();
     private BigDecimal startingBalance = new BigDecimal("0.00");
     private String[] displayPurchaseOptions;
     private BigDecimal feedBalance = new BigDecimal("0.00");
+
 
     public String[] getDisplayPurchaseOptions(Map<String, Item> inventory) {
 
@@ -75,13 +77,15 @@ public class PurchaseMenu {
                         }
 
                     } else if (purchaseChoice == 3) {
+                        ft.makeChange2(mb.getBalance());
+                        System.out.printf("Your change is $%s", mb.getBalance());
                         break;
                     }
                 }
             }
         }
-
         return displayPurchaseOptions;
+
     }
 
             private void displayInventory (Map < String, Item > inventory){
